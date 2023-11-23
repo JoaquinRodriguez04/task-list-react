@@ -30,7 +30,7 @@ const TaskForm = ({ addTasks }) => {
 
     return (
         <div>
-            <button className='new' onClick={handleOpenModal}>
+            <button className='btnAddTask' onClick={handleOpenModal}>
                 Nueva Tarea
                 <i className="bi bi-plus-circle"></i>
             </button>

@@ -14,7 +14,7 @@ const TaskList = ({currentTasks, deleteTask}) => {
           : currentTasks.map(currentTask => (
             <TaskItem currentTask={currentTask} key={currentTask.id} deleteTask={deleteTask} />
           ))
-      };
+      }
     </ul>
   )
 };

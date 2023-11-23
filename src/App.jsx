@@ -27,7 +27,7 @@ function App() {
   // efecto que recarga el componente cada vez que cambie el estado que contiene el valor del input par buscar, o cuando se agregue una tarea al estado original
   useEffect(() => {
     // retorna la tarea que incluya el valor del estado searchString, que es lo que el usuario escribe en el buscador
-    setCurrentTasks(tasks.filter((task) => task.titleTask.toLowerCase().includes(searchString.toLowerCase())));
+    setCurrentTasks(tasks.filter((task) => task.title.toLowerCase().includes(searchString.toLowerCase())));
   }, [searchString, tasks]);
 
   return (
