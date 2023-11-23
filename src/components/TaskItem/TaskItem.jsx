@@ -1,14 +1,18 @@
-import React from 'react';
+import React from 'react'
+import './TaskItem.css';
 
-const TaskItem = ({currentTasks, deleteTask}) => {
+const TaskItem = ({currentTask, deleteTask}) => {
   return (
-    <li>
-      <div>
-        <h2>{currentTasks.titleTask}</h2>
-        <p>{currentTasks.descTask}</p>
-        <span>{currentTasks.date}</span>
-      </div>
-      <button onClick={() => deleteTask(task.id)}>Finalizar Tarea</button>
+    <li className='taskItemCard'>
+      <h3>{currentTask.title}</h3>
+      <p>{currentTask.description}</p>
+      <span>{currentTask.createAt}</span>
+      <button
+        className='btnFinishTask' 
+        onClick={() => deleteTask(currentTask.id)}
+      >
+        finalizar
+      </button>
     </li>
   )
 };

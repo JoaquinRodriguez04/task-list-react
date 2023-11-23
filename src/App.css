@@ -1,15 +1,18 @@
-:root{
-  --bgApp: #f1f1ff;
-  --color: #1a1a1a;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-  background-color: var(--bgApp);
-  color: var(--color);
+.app{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    border: none;
+    background-color: transparent;
 }
