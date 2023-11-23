@@ -4,7 +4,6 @@
   --bg-item-card: #2962d53a;
 }
 
-
 .taskItemCard {
   background-color: var(--bg-item-card);
   list-style: none;

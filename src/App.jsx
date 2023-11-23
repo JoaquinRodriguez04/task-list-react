@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { TaskNavbar, TaskList  } from './components';
+import { TaskNavbar, TaskList } from './components';
 import './App.css';
 
 function App() {
