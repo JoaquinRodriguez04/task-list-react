@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import "./TaskForm.css";
 
-const TaskForm = ({ addTasks }) => {
+const TaskForm = ({addTasks, modeDark}) => {
 
     // estado que maneja la visibilidad del modal, comienza en false para que no sea visible
     const [openModal, setOpenModal] = useState(false);
@@ -38,11 +38,11 @@ const TaskForm = ({ addTasks }) => {
                 openModal
                 &&
                 <div className='modalBackground'>
-                    <div className='modal'>
+                    <div className={`modal ${modeDark && 'modalModeDark'}`}>
                         <div className='modalTop'>
                             <h2>Agregar nueva tarea</h2>
                             <button 
-                                className='btnCloseModal'
+                                className={`btnCloseModal ${modeDark && 'btnCloseModalModeDark'}`}
                                 onClick={handleCloseModal}>
                                 <i className="bi bi-x-lg"></i>
                             </button>
@@ -51,21 +51,21 @@ const TaskForm = ({ addTasks }) => {
                             onSubmit={handleSubmitTask}
                             className='formWrapper'>
                             <div className='inputWrapper'>
-                                <label htmlFor="title">Ingresa el titulo de su tarea:</label>
+                                <label htmlFor="title">Ingrese el titulo:</label>
                                 <input
                                     type="text"
                                     id='title'
                                     name='title'
                                     placeholder='ej: salir a correr 20 minutos'
-                                    className='input' />
+                                    className={`input ${modeDark && 'inputModeDark'}`} />
                             </div>
                             <div className='inputWrapper'>
-                                <label htmlFor="description">Ingrese la descripcion para su tarea:</label>
+                                <label htmlFor="description">Ingrese la descripcion:</label>
                                 <textarea 
                                     name="description" 
                                     id="description" 
                                     placeholder='descripcion / aclaracion' 
-                                    className='textarea'
+                                    className={`textarea ${modeDark && 'inputModeDark'}`}
                                     >
                                 </textarea>
                             </div>

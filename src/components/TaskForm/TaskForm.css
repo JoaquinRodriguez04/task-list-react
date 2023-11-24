@@ -31,6 +31,11 @@
   width: 35em;
 }
 
+.modalModeDark{
+  background-color: #141313;
+  color: var(--clr-white);
+}
+
 .modalTop {
   display: flex;
   align-items: center;
@@ -42,7 +47,12 @@
   padding: .3em .5em;
   border: none;
   background-color: transparent;
+  color: #111;
   border-radius: var(--border-radius);
+}
+
+.btnCloseModalModeDark{
+  color: var(--bg-white);
 }
 
 .btnCloseModal:hover {
@@ -87,6 +97,18 @@
 
 :is(.input, .textarea):focus {
   background-color: #123071e5;
+}
+
+:is(.inputModeDark, .textareaModeDark){
+  background-color: #2c39565e;
+}
+
+:is(.inputModeDark, .textareaModeDark):hover{
+  background-color: #4151755e;
+}
+
+:is(.inputModeDark, .textareaModeDark):focus{
+  background-color: #5261885e;
 }
 
 .btnWrapper {

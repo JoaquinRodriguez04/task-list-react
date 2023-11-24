@@ -8,6 +8,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
   const [currentTasks, setCurrentTasks] = useState([]);
   const [searchString, setSearhString] = useState('');
+  const [modeDark, setModeDark] = useState(false);
 
   // funcion que agrega las tareas al estado tarea, y hacemos un spread(...) del array de tareas y le agregamos la tarea que traemos como parametro
   const addTasks = (task) =>{
@@ -30,12 +31,18 @@ function App() {
     setCurrentTasks(tasks.filter((task) => task.title.toLowerCase().includes(searchString.toLowerCase())));
   }, [searchString, tasks]);
 
+  const handleModeDark = () => {
+    setModeDark(!modeDark);
+  }
+
   return (
-    <section className='app'>
+    <section className={`app ${modeDark && 'appModeDark'}`}>
       <TaskNavbar 
         addTasks={addTasks} 
         searchString={searchString} 
         handleChangeFilter={handleChangeFilter} 
+        handleModeDark={handleModeDark}
+        modeDark={modeDark}
       />
       <TaskList currentTasks={currentTasks} deleteTask={deleteTask}/>
     </section>
