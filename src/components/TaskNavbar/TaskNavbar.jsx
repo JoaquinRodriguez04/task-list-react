@@ -22,7 +22,13 @@ const TaskNavbar = ({addTasks, searchString, handleChangeFilter, handleModeDark,
           <button 
             className={`btnHandleMode ${modeDark && 'btnHandleModeDK'}`}
             onClick={handleModeDark}>
-            <i class="bi bi-moon-stars-fill"></i>
+            {
+              modeDark 
+              ?
+              <i class="bi bi-moon-stars-fill"></i>
+              :
+              <i class="bi bi-brightness-high-fill"></i>
+            }
           </button>
         </div>
     </header>

@@ -8,6 +8,7 @@
   --bg-red-hover: #ba2727;
   --bg-dark-blue: #051027e5;
   --bg-white: #fff;
+  --bg-modal-MK: #141313;
 }
 
 .modalBackground {
@@ -32,7 +33,7 @@
 }
 
 .modalModeDark{
-  background-color: #141313;
+  background-color: var(--bg-modal-MK);
   color: var(--clr-white);
 }
 

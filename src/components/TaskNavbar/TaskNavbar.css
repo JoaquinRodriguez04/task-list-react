@@ -4,6 +4,10 @@
   --border-radius: .3em;
   --clr-red: #f24a4a;
   --border-clr: #1138d4;
+  --bg-navbar: #d0d0d6;
+  --bg-navbar-DK: #1f1f20;
+  --bg-input-searh: #f1f1f1;
+  --bg-input-searh-DK: #f1f1f1;
 }
 
 .navbar {
@@ -12,12 +16,12 @@
   justify-content: space-between;
   padding: .8em 2em;
   backdrop-filter: blur(10px);
-  background-color: #d0d0d6;
+  background-color: var(--bg-navbar);
   border-bottom: 2px solid var(--border-clr);
 }
 
 .navBarModeDark{
-  background-color: #1f1f20;
+  background-color: var(--bg-navbar-DK);
   color: var(--clr-white);
 }
 
@@ -49,11 +53,11 @@
   padding: .6em .65em;
   outline: none;
   width: 18em;
-  background-color: #f1f1f1;
+  background-color: var(--bg-input-searh);
 }
 
 .inputTaskSearhModeDark{
-  background-color: #4f4f526f;
+  background-color: var(--bg-input-searh-DK);
 }
 
 .btnHandleMode{
